@@ -1,7 +1,7 @@
 import React from "react";
 
 function Console() {
-  return;
+  return <p>Console Page</p>;
 }
 
 export default Console;

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Console from "./Console";
+import ConsoleCard from "./ConsoleCard";
 import axios from "axios";
 
 function Consoles() {
-  const [consoleData, setConsoleData] = useState(null);
+  const [consoleData, setConsoleData] = useState([]);
+  const [consoleID, setConsoleID] = useState(null);
 
   useEffect(() => {
     getData();
@@ -15,9 +18,28 @@ function Consoles() {
       .catch((err) => console.log("Database error"));
   };
 
-  console.log(consoleData);
+  if (consoleData.length === 0) {
+    return <p>Loading</p>;
+  }
 
-  return <p>These are consoles!</p>;
+  if (!!consoleID) {
+    return <Console />;
+  }
+
+  return (
+    <div>
+      {consoleData.map((console) => {
+        return (
+          <ConsoleCard
+            key={console.id}
+            name={console.name}
+            id={console.id}
+            image={console.image}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default Consoles;
