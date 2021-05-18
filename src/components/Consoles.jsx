@@ -15,7 +15,9 @@ function Consoles() {
     axios
       .get("http://csc225.mockable.io/consoles")
       .then((res) => setConsoleData(res.data))
-      .catch((err) => console.log("Database error"));
+      .catch((err) =>
+        console.log("Database error: Error finding console list")
+      );
   };
 
   if (consoleData.length === 0) {
