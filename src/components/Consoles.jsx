@@ -23,19 +23,37 @@ function Consoles() {
   }
 
   if (!!consoleID) {
-    return <Console />;
+    return (
+      <div>
+        <Console id={consoleID} />
+        <button
+          onClick={() => {
+            setConsoleID(null);
+          }}
+        >
+          Go back
+        </button>
+      </div>
+    );
   }
+  console.log(consoleID);
 
   return (
     <div>
       {consoleData.map((console) => {
         return (
-          <ConsoleCard
+          <button
+            onClick={() => {
+              setConsoleID(console.id);
+            }}
             key={console.id}
-            name={console.name}
-            id={console.id}
-            image={console.image}
-          />
+          >
+            <ConsoleCard
+              name={console.name}
+              id={console.id}
+              image={console.image}
+            />
+          </button>
         );
       })}
     </div>
