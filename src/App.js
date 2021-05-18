@@ -1,7 +1,8 @@
 import React from "react";
+import Consoles from "./components/Consoles";
 
 function App() {
-  return <p>Hello World</p>;
+  return <Consoles />;
 }
 
 export default App;
