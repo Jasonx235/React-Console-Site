@@ -34,14 +34,16 @@ function Consoles() {
     return (
       <div>
         <Console id={consoleID} />
-        <button
-          className='glass-background go-back '
-          onClick={() => {
-            setConsoleID(null);
-          }}
-        >
-          Go back
-        </button>
+        <div className='d-flex justify-content-center align-items-center'>
+          <button
+            className='glass-background go-back '
+            onClick={() => {
+              setConsoleID(null);
+            }}
+          >
+            Go back
+          </button>
+        </div>
       </div>
     );
   }
