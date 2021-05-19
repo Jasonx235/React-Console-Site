@@ -4,7 +4,7 @@ Ecommerce Store specializing in consoles
 
 ## Description
 
-Reinforcing React concepts w/ API calls
+Reinforcing React concepts w/ API calls and Bootstrap 4.6
 
 ### Screenshots
 
