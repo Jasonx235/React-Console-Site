@@ -40,10 +40,13 @@ function Consoles() {
   }
 
   return (
-    <div className='row d-flex flex-column'>
+    <div className='row d-flex justify-content-center align-content-center'>
       {consoleData.map((console) => {
         return (
-          <div key={console.id}>
+          <div
+            className='col-6-lg col-sm d-flex justify-content-center align-content-center'
+            key={console.id}
+          >
             <button
               onClick={() => {
                 setConsoleID(console.id);

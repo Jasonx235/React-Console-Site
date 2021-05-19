@@ -7,7 +7,7 @@ function Navbar() {
       <div className='container'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light'>
           <a className='navbar-brand' href='/'>
-            Consoles-R-Us <i className='fas fa-keyboard'></i>
+            Consoles-R-Us <i class='fas fa-gamepad'></i>
           </a>
           <button
             className='navbar-toggler'

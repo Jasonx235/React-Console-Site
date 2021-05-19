@@ -14,8 +14,44 @@ button {
 }
 
 .console-card {
-  background-color: aqua;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 350px;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+.console-card img {
+  margin-bottom: 20px;
   max-width: 200px;
   max-height: 200px;
-  margin-bottom: 50px;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+}
+
+.glass-background {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+.card-text {
+  font-size: 20px;
 }

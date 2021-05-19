@@ -22,7 +22,7 @@ function Console({ id }) {
   }
 
   return (
-    <div className='card mb-3'>
+    <div className='card mb-3 glass-background'>
       <div className='row no-gutters'>
         <div className='col-md-4'>
           <img src={image} alt={name} className='img-fluid' />
