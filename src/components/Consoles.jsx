@@ -40,21 +40,22 @@ function Consoles() {
   }
 
   return (
-    <div className='d-flex flex-column'>
+    <div className='row d-flex flex-column'>
       {consoleData.map((console) => {
         return (
-          <button
-            onClick={() => {
-              setConsoleID(console.id);
-            }}
-            key={console.id}
-          >
-            <ConsoleCard
-              name={console.name}
-              id={console.id}
-              image={console.image}
-            />
-          </button>
+          <div key={console.id}>
+            <button
+              onClick={() => {
+                setConsoleID(console.id);
+              }}
+            >
+              <ConsoleCard
+                name={console.name}
+                id={console.id}
+                image={console.image}
+              />
+            </button>
+          </div>
         );
       })}
     </div>
