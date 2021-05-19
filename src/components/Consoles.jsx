@@ -29,6 +29,7 @@ function Consoles() {
       <div>
         <Console id={consoleID} />
         <button
+          className='glass-background go-back'
           onClick={() => {
             setConsoleID(null);
           }}

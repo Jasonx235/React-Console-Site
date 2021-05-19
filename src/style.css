@@ -15,7 +15,7 @@ button {
 
 .console-card {
   background-color: rgba(255, 255, 255, 0.2);
-  width: 350px;
+  width: 325px;
   height: 300px;
 
   display: flex;
@@ -38,6 +38,11 @@ button {
   max-height: 200px;
 }
 
+.console-card:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s;
+}
+
 .glass {
   background-color: rgba(255, 255, 255, 0.6) !important;
   backdrop-filter: blur(40px);
@@ -54,4 +59,33 @@ button {
 
 .card-text {
   font-size: 20px;
+}
+
+.go-back {
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.go-back:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.2s;
+}
+
+.console-page {
+  margin-top: 75px;
+  padding: 30px;
+  border-radius: 20px;
+  min-height: 300px;
+}
+
+.console-page img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 300px;
+}
+
+.console-name {
+  font-size: 56px;
 }

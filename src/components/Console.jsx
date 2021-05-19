@@ -22,18 +22,22 @@ function Console({ id }) {
   }
 
   return (
-    <div className='card mb-3 glass-background'>
+    <div className='card mb-3 glass-background console-page'>
       <div className='row no-gutters'>
-        <div className='col-md-4'>
-          <img src={image} alt={name} className='img-fluid' />
+        <div className='col-lg-4'>
+          <img src={image} alt={name} className='d-block mx-auto' />
         </div>
-        <div className='col-md-8'>
-          <div className='card-body'>
-            <h5 className='card-title'>{name}</h5>
-            <p className='card-text'>
-              {price}, {country}, {releaseYear}
-            </p>
-          </div>
+        <div className='col-lg-8'>
+          <h5 className='card-title console-name text-center text-lg-left pl-lg-5'>
+            {name}
+          </h5>
+          <p className='card-text text-center text-lg-left pl-lg-5'>
+            <b>Price:</b> ${price}
+            <br />
+            <b>Release Country:</b> {country}
+            <br />
+            <b>Release Year:</b> {releaseYear}
+          </p>
         </div>
       </div>
     </div>
