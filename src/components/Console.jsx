@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "./Loading";
 
 function Console({ id }) {
   const [consoleInfo, setConsoleInfo] = useState({});
@@ -18,7 +19,11 @@ function Console({ id }) {
   }, [id]);
 
   if (Object.keys(consoleInfo).length === 0) {
-    return <p>Loading...</p>;
+    return (
+      <div className='d-flex justify-content-center align-items-center '>
+        <Loading type='bars' />
+      </div>
+    );
   }
 
   return (

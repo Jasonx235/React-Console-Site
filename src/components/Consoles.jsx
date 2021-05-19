@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Console from "./Console";
 import ConsoleCard from "./ConsoleCard";
+import Loading from "./Loading";
+
 import axios from "axios";
 
 function Consoles() {
@@ -21,7 +23,11 @@ function Consoles() {
   };
 
   if (consoleData.length === 0) {
-    return <p>Loading...</p>;
+    return (
+      <div className='d-flex justify-content-center align-items-center'>
+        <Loading type='bars' />
+      </div>
+    );
   }
 
   if (!!consoleID) {
@@ -29,7 +35,7 @@ function Consoles() {
       <div>
         <Console id={consoleID} />
         <button
-          className='glass-background go-back'
+          className='glass-background go-back '
           onClick={() => {
             setConsoleID(null);
           }}
