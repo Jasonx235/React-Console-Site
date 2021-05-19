@@ -21,7 +21,7 @@ function Consoles() {
   };
 
   if (consoleData.length === 0) {
-    return <p>Loading</p>;
+    return <p>Loading...</p>;
   }
 
   if (!!consoleID) {
@@ -38,10 +38,9 @@ function Consoles() {
       </div>
     );
   }
-  console.log(consoleID);
 
   return (
-    <div>
+    <div className='d-flex flex-column'>
       {consoleData.map((console) => {
         return (
           <button
